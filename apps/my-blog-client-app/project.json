@@ -1,0 +1,8 @@
+{
+  "name": "my-blog-client-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/my-blog-client-app",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}
