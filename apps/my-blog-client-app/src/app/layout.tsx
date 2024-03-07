@@ -24,9 +24,11 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
         <html lang="en">
             <body className={inter.className}>
                 <StoreProvider>
-                    <AuthorizationProvider>
-                        <OverlayRootProvider>{children}</OverlayRootProvider>
-                    </AuthorizationProvider>
+                    <OverlayRootProvider>
+                        <AuthorizationProvider>
+                            {children}
+                        </AuthorizationProvider>
+                    </OverlayRootProvider>
                 </StoreProvider>
             </body>
         </html>

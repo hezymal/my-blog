@@ -4,7 +4,12 @@ import { AddCommentButton } from "@client-app/features/post/ui/add-comment-butto
 import { LikeButton } from "@client-app/features/post/ui/like-button";
 import { NumberOfViews } from "@client-app/features/post/ui/number-of-views";
 import { ButtonGroup } from "@client-app/shared/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@client-app/shared/ui/card";
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+} from "@client-app/shared/ui/card";
 import { Grid, GridCell } from "@client-app/shared/ui/grid";
 import { ImageBox } from "@client-app/shared/ui/image-box";
 import { TextBox } from "@client-app/shared/ui/text-box";
@@ -18,7 +23,7 @@ export const PostPreview: FC<PostPreviewProps> = ({ post }) => {
         <Card>
             <CardHeader>{post.createDate.toDateString()}</CardHeader>
             <CardContent>
-                <TextBox noMargin>
+                <TextBox>
                     <h1>{post.title}</h1>
                     <p>{post.description}</p>
                 </TextBox>
@@ -39,7 +44,7 @@ export const PostPreview: FC<PostPreviewProps> = ({ post }) => {
                             />
                         </ButtonGroup>
                     </GridCell>
-                    <GridCell size={6} align="right" valign="center">
+                    <GridCell size={6} align="right" valign="middle">
                         <NumberOfViews numberOfViews={post.numberOfViews} />
                     </GridCell>
                 </Grid>

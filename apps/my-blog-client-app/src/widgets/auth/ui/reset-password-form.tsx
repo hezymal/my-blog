@@ -4,10 +4,14 @@ import { useRouter } from "next/navigation";
 import { FC, FormEventHandler, useState } from "react";
 import { z } from "zod";
 import { useAppDispatch } from "@client-app/app/store";
-import { resetUserPassword } from "@client-app/entities/auth/api/auth";
 import { addNotificationEntry } from "@client-app/entities/notification/model/notification-slice";
 import { Button, ButtonGroup } from "@client-app/shared/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@client-app/shared/ui/card";
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+} from "@client-app/shared/ui/card";
 import { Form, FormField } from "@client-app/shared/ui/form";
 import { RouteLink } from "@client-app/shared/ui/link";
 import { TextInput } from "@client-app/shared/ui/text-input";
@@ -36,7 +40,6 @@ const ResetPasswordForm: FC = () => {
             return;
         }
 
-        await resetUserPassword({ email });
         dispatch(
             addNotificationEntry({
                 type: "success",

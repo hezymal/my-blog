@@ -9,10 +9,12 @@ const SESSION_SECRET = process.env.SESSION_SECRET;
 
 const app = express();
 
+app.use(express.json());
 app.use(
     session({
+        saveUninitialized: true,
         secret: SESSION_SECRET,
-        cookie: { secure: true },
+        resave: false,
     })
 );
 

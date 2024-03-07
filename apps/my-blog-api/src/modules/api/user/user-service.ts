@@ -29,6 +29,7 @@ export const createUser = async (
 ): Promise<string> => {
     const userCollection = useUserCollection();
     const userEntity: UserEntity = userCreationDto;
+    console.log(userEntity);
     const insertResult = await userCollection.insertOne(userEntity);
     return insertResult.insertedId.toString();
 };

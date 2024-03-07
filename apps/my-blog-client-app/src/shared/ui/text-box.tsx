@@ -4,41 +4,32 @@ import { pt } from "../lib/sizes";
 
 interface TextBoxProps {
     children: ReactNode;
-    noMargin: boolean;
 }
 
-interface TextBoxRootProps {
-    $noMargin: boolean;
-}
-
-const TextBoxRoot = styled.div<TextBoxRootProps>`
+const TextBoxRoot = styled.div`
     margin-top: ${pt(2)};
     line-height: ${pt(2.5)};
+
+    &:first-child {
+        margin-top: 0;
+    }
 
     h1 {
         line-height: ${pt(3.5)};
         font-size: 1.6em;
         font-weight: 500;
         margin: ${pt(2)} 0 0 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 
     p {
         margin: ${pt(2)} 0 0 0;
     }
-
-    ${(props) => {
-        if (props.$noMargin) {
-            return `
-                margin-top: 0;
-
-                :first-child {
-                    margin-top: 0;
-                }
-            `;
-        }
-    }}
 `;
 
-export const TextBox: FC<TextBoxProps> = ({ children, noMargin }) => {
-    return <TextBoxRoot $noMargin={noMargin}>{children}</TextBoxRoot>;
+export const TextBox: FC<TextBoxProps> = ({ children }) => {
+    return <TextBoxRoot>{children}</TextBoxRoot>;
 };

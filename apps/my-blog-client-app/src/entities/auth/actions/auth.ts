@@ -1,27 +1,37 @@
 "use client";
 
-import * as api from "../api/auth";
+import * as http from "@client-app/shared/lib/http";
+import { Result } from "@client-app/shared/lib/result";
+import { User } from "@client-app/entities/user/model/user";
 
-export const loginUser = async (request: api.LoginUserRequest) => {
-    const response = await api.loginUser(request);
-    return response;
+interface LoginUserRequest {
+    userName: string;
+    password: string;
+}
+
+interface RegisterUserRequest {
+    userName: string;
+    password: string;
+}
+
+export const registerUser = (request: RegisterUserRequest) => {
+    return http.request.post<Result<string>, LoginUserRequest>(
+        "/api/auth/register",
+        request
+    );
 };
 
-export const registerUser = async (request: api.RegisterUserRequest) => {
-    await api.registerUser(request);
+export const loginUser = (request: LoginUserRequest) => {
+    return http.request.post<Result<string>, LoginUserRequest>(
+        "/api/auth/login",
+        request
+    );
 };
 
-export const resetUserPassword = async (
-    request: api.ResetUserPasswordRequest
-) => {
-    await api.resetUserPassword(request);
+export const logoutUser = () => {
+    return http.request.delete<Result<string>>("/api/auth/logout");
 };
 
-export const getAuthUser = async () => {
-    const response = await api.getAuthUser();
-    return response;
-};
-
-export const changeAuthUser = async (request: api.ChangeAuthUserRequest) => {
-    await api.changeAuthUser(request);
+export const getAuthUser = () => {
+    return http.request.get<Result<User>>("/api/auth/user");
 };

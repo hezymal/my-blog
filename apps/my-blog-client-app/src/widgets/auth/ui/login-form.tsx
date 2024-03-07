@@ -3,15 +3,18 @@
 import { useRouter } from "next/navigation";
 import { FC, FormEventHandler, useState } from "react";
 import { z } from "zod";
-import { useAppDispatch } from "@client-app/app/store";
 import { loginUser } from "@client-app/entities/auth/actions/auth";
-import { fetchAuthUser } from "@client-app/entities/auth/model/auth-slice";
+import { createValidator } from "@client-app/shared/lib/validation";
 import { Button, ButtonGroup } from "@client-app/shared/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@client-app/shared/ui/card";
+import {
+    Card,
+    CardContent,
+    CardFooter,
+    CardHeader,
+} from "@client-app/shared/ui/card";
 import { Form, FormField } from "@client-app/shared/ui/form";
 import { RouteLink } from "@client-app/shared/ui/link";
 import { TextInput } from "@client-app/shared/ui/text-input";
-import { createValidator } from "@client-app/shared/lib/validation";
 
 const validate = createValidator(
     z.object({
@@ -22,15 +25,14 @@ const validate = createValidator(
 
 export const LoginForm: FC = () => {
     const router = useRouter();
-    const dispatch = useAppDispatch();
 
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
 
-    const validationResult = !isSubmitted
-        ? null
-        : validate({ userName, password });
+    const validationResult = isSubmitted
+        ? validate({ userName, password })
+        : null;
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (event) => {
         event.preventDefault();
@@ -42,7 +44,6 @@ export const LoginForm: FC = () => {
         }
 
         await loginUser({ userName, password });
-        dispatch(fetchAuthUser());
         router.push("/blog");
     };
 

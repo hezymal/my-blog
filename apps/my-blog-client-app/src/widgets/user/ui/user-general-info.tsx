@@ -3,8 +3,8 @@
 import { FC, FormEventHandler, useState } from "react";
 import { z } from "zod";
 import { useAppDispatch } from "@client-app/app/store";
-import { changeAuthUser } from "@client-app/entities/auth/actions/auth";
-import { fetchAuthUser } from "@client-app/entities/auth/model/auth-slice";
+import {} from "@client-app/entities/auth/actions/auth";
+// import { fetchAuthUser } from "@client-app/entities/auth/model/auth-slice";
 import { Button, ButtonGroup } from "@client-app/shared/ui/button";
 import { Card, CardContent, CardFooter } from "@client-app/shared/ui/card";
 import { Form, FormField } from "@client-app/shared/ui/form";
@@ -34,8 +34,9 @@ export const UserGeneralInfo: FC = () => {
             return;
         }
 
-        await changeAuthUser({ userName });
-        dispatch(fetchAuthUser());
+        // TODO: fix
+        // await changeAuthUser({ userName });
+        // dispatch(fetchAuthUser());
     };
 
     return (

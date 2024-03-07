@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { FC, FormEventHandler, useState } from "react";
 import { z } from "zod";
-import { registerUser } from "@client-app/entities/auth/api/auth";
+import { registerUser } from "@client-app/entities/auth/actions/auth";
 import { Button, ButtonGroup } from "@client-app/shared/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@client-app/shared/ui/card";
 import { Form, FormField } from "@client-app/shared/ui/form";

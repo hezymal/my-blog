@@ -7,13 +7,18 @@ import { Grid, GridCell } from "@client-app/shared/ui/grid";
 import { AppHeader } from "@client-app/widgets/app/ui/app-header";
 import { PostCategories } from "@client-app/widgets/post/ui/post-categories";
 import { PostCreationModal } from "@client-app/widgets/post/ui/post-creation-modal";
-import { AuthorizationProvider } from "../authorization-provider";
+import { AuthorizationProvider, useIsAuth } from "../authorization-provider";
 
 interface BlogLayoutProps {
     children: ReactNode;
 }
 
 const BlogLayout: FC<BlogLayoutProps> = ({ children }) => {
+    const isAuth = useIsAuth();
+    if (!isAuth) {
+        return null;
+    }
+
     return (
         <AuthorizationProvider>
             <AppHeader />
