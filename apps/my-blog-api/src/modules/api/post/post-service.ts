@@ -1,7 +1,7 @@
 import { ObjectId, WithId } from "mongodb";
+import { usePostCollection } from "@api/db";
+import { result } from "@api/lib/result";
 import { PostEntity } from "./post-entity";
-import { usePostCollection } from "../../../db";
-import { result } from "../../../lib/result";
 
 export interface PostDto {
     id: string;

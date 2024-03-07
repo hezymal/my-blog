@@ -1,5 +1,5 @@
 import { ObjectId, WithId } from "mongodb";
-import { useUserCollection } from "../../../db";
+import { useUserCollection } from "@api/db";
 import { UserEntity } from "./user-entity";
 
 export interface UserDto {

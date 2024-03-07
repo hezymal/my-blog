@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { Result } from "../../../lib/result";
+import { Result } from "@api/lib/result";
 import { identityUser, loginUser, registerUser } from "./auth-service";
 
 interface LoginRequest {

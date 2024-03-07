@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { EmptyObject } from "../../../lib/base-types";
-import { Result } from "../../../lib/result";
+import { EmptyObject } from "@api//lib/base-types";
+import { Result } from "@api//lib/result";
 import {
     changePost,
     createPost,
