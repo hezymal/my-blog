@@ -1,13 +1,13 @@
 import { FC } from "react";
-import { Post } from "@/entities/post/model/post";
-import { AddCommentButton } from "@/features/post/ui/add-comment-button";
-import { LikeButton } from "@/features/post/ui/like-button";
-import { NumberOfViews } from "@/features/post/ui/number-of-views";
-import { ButtonGroup } from "@/shared/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/shared/ui/card";
-import { Grid, GridCell } from "@/shared/ui/grid";
-import { ImageBox } from "@/shared/ui/image-box";
-import { TextBox } from "@/shared/ui/text-box";
+import { Post } from "@client-app/entities/post/model/post";
+import { AddCommentButton } from "@client-app/features/post/ui/add-comment-button";
+import { LikeButton } from "@client-app/features/post/ui/like-button";
+import { NumberOfViews } from "@client-app/features/post/ui/number-of-views";
+import { ButtonGroup } from "@client-app/shared/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@client-app/shared/ui/card";
+import { Grid, GridCell } from "@client-app/shared/ui/grid";
+import { ImageBox } from "@client-app/shared/ui/image-box";
+import { TextBox } from "@client-app/shared/ui/text-box";
 
 interface PostPreviewProps {
     post: Post;

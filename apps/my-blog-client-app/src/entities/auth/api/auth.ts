@@ -1,7 +1,7 @@
 "use server";
 
-import { User } from "@/entities/user/model/user";
-import { sleep } from "@/shared/lib/promise";
+import { User } from "@client-app/entities/user/model/user";
+import { sleep } from "@client-app/shared/lib/promise";
 
 export interface LoginUserRequest {
     userName: string;

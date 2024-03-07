@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { shortenNumber } from "@/shared/lib/number";
+import { shortenNumber } from "@client-app/shared/lib/number";
 
 interface NumberOfViewsProps {
     numberOfViews: number;

@@ -2,7 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { User } from "@/entities/user/model/user";
+import { User } from "@client-app/entities/user/model/user";
 import { getAuthUser } from "../actions/auth";
 
 interface AuthState {

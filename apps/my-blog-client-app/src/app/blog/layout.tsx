@@ -1,12 +1,12 @@
 "use client";
 
 import { FC, ReactNode } from "react";
-import { Card } from "@/shared/ui/card";
-import { Container } from "@/shared/ui/container";
-import { Grid, GridCell } from "@/shared/ui/grid";
-import { AppHeader } from "@/widgets/app/ui/app-header";
-import { PostCategories } from "@/widgets/post/ui/post-categories";
-import { PostCreationModal } from "@/widgets/post/ui/post-creation-modal";
+import { Card } from "@client-app/shared/ui/card";
+import { Container } from "@client-app/shared/ui/container";
+import { Grid, GridCell } from "@client-app/shared/ui/grid";
+import { AppHeader } from "@client-app/widgets/app/ui/app-header";
+import { PostCategories } from "@client-app/widgets/post/ui/post-categories";
+import { PostCreationModal } from "@client-app/widgets/post/ui/post-creation-modal";
 import { AuthorizationProvider } from "../authorization-provider";
 
 interface BlogLayoutProps {

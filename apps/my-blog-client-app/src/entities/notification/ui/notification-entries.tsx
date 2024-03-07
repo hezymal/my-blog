@@ -1,10 +1,10 @@
 import { FC, Fragment, useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "@/app/store";
-import { Alert } from "@/shared/ui/alert";
-import { Card } from "@/shared/ui/card";
+import { useAppDispatch, useAppSelector } from "@client-app/app/store";
+import { Alert } from "@client-app/shared/ui/alert";
+import { Card } from "@client-app/shared/ui/card";
 import { removeOutdatedNotificationEntries } from "../model/notification-slice";
-import { ButtonColor, IconButton } from "@/shared/ui/button";
-import { Grid, GridCell } from "@/shared/ui/grid";
+import { ButtonColor, IconButton } from "@client-app/shared/ui/button";
+import { Grid, GridCell } from "@client-app/shared/ui/grid";
 import { NotificationEntryType } from "../model/notification";
 
 const getIconColorByEntryType = (

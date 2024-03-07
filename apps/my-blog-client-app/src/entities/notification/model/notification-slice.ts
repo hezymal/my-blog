@@ -1,7 +1,7 @@
 "use client";
 
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { parseDate } from "@/shared/lib/date";
+import { parseDate } from "@client-app/shared/lib/date";
 import { NotificationEntry, NotificationEntryCreation } from "./notification";
 
 interface NotificationState {

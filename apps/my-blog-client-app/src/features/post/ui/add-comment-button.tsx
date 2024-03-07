@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Button } from "@/shared/ui/button";
-import { Icon } from "@/shared/ui/icon";
+import { Button } from "@client-app/shared/ui/button";
+import { Icon } from "@client-app/shared/ui/icon";
 
 interface AddCommentButtonProps {
     numberOfComments: number;

@@ -4,7 +4,7 @@ import "./material-symbols.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { FC, ReactNode } from "react";
-import { OverlayRootProvider } from "@/shared/ui/overlay-root";
+import { OverlayRootProvider } from "@client-app/shared/ui/overlay-root";
 import { StoreProvider } from "./store-provider";
 import { AuthorizationProvider } from "./authorization-provider";
 

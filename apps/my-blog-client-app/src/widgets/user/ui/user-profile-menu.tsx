@@ -1,8 +1,8 @@
 import { usePathname } from "next/navigation";
 import { FC, Fragment } from "react";
-import { Menu, MenuItem } from "@/shared/ui/menu";
-import { Card } from "@/shared/ui/card";
-import { RouteLink } from "@/shared/ui/link";
+import { Menu, MenuItem } from "@client-app/shared/ui/menu";
+import { Card } from "@client-app/shared/ui/card";
+import { RouteLink } from "@client-app/shared/ui/link";
 
 export const UserProfileMenu: FC = () => {
     const pathname = usePathname();

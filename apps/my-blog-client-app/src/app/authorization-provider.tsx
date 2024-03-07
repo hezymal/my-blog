@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, ReactNode, useEffect } from "react";
-import { fetchAuthUser } from "@/entities/auth/model/auth-slice";
+import { fetchAuthUser } from "@client-app/entities/auth/model/auth-slice";
 import { useAppDispatch, useAppSelector } from "./store";
 
 interface AuthorizationProviderProps {

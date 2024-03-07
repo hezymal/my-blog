@@ -2,12 +2,12 @@
 
 import { FC } from "react";
 import styled from "styled-components";
-import { AppLogo } from "@/features/app/ui/app-logo";
-import { Container } from "@/shared/ui/container";
-import { Grid, GridCell } from "@/shared/ui/grid";
-import { colors } from "@/shared/lib/colors";
-import { pt } from "@/shared/lib/sizes";
-import { UserBar } from "@/widgets/user/ui/user-bar";
+import { AppLogo } from "@client-app/features/app/ui/app-logo";
+import { Container } from "@client-app/shared/ui/container";
+import { Grid, GridCell } from "@client-app/shared/ui/grid";
+import { colors } from "@client-app/shared/lib/colors";
+import { pt } from "@client-app/shared/lib/sizes";
+import { UserBar } from "@client-app/widgets/user/ui/user-bar";
 
 const AppHeaderRoot = styled.div`
     background-color: ${colors.grey01};

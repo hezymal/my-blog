@@ -1,7 +1,7 @@
 import { useSearchParams } from "next/navigation";
 import { FC, useEffect, useState } from "react";
-import { PostCategory } from "@/entities/post/model/post";
-import { Menu, MenuItem } from "@/shared/ui/menu";
+import { PostCategory } from "@client-app/entities/post/model/post";
+import { Menu, MenuItem } from "@client-app/shared/ui/menu";
 import { fetchPostsCategories } from "../actions/post";
 
 export const PostCategories: FC = () => {

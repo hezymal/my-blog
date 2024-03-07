@@ -1,10 +1,10 @@
 "use client";
 
 import { FC, ReactNode } from "react";
-import { Container } from "@/shared/ui/container";
-import { Grid, GridCell } from "@/shared/ui/grid";
-import { AppHeader } from "@/widgets/app/ui/app-header";
-import { UserProfileMenu } from "@/widgets/user/ui/user-profile-menu";
+import { Container } from "@client-app/shared/ui/container";
+import { Grid, GridCell } from "@client-app/shared/ui/grid";
+import { AppHeader } from "@client-app/widgets/app/ui/app-header";
+import { UserProfileMenu } from "@client-app/widgets/user/ui/user-profile-menu";
 import { AuthorizationProvider } from "../authorization-provider";
 
 interface ProfileLayoutProps {

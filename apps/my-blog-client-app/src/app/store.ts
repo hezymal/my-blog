@@ -5,8 +5,8 @@ import {
     useStore,
 } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
-import { authSlice } from "@/entities/auth/model/auth-slice";
-import { notificationSlice } from "@/entities/notification/model/notification-slice";
+import { authSlice } from "@client-app/entities/auth/model/auth-slice";
+import { notificationSlice } from "@client-app/entities/notification/model/notification-slice";
 
 export const makeStore = () => {
     return configureStore({

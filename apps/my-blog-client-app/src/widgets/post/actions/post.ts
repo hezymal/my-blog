@@ -1,7 +1,7 @@
 "use server";
 
-import { Post, PostCategory } from "@/entities/post/model/post";
-import { sleep } from "@/shared/lib/promise";
+import { Post, PostCategory } from "@client-app/entities/post/model/post";
+import { sleep } from "@client-app/shared/lib/promise";
 
 interface FetchPostsRequest {
     category: string | null;

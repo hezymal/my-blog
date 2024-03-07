@@ -3,15 +3,15 @@
 import { useRouter } from "next/navigation";
 import { FC, FormEventHandler, useState } from "react";
 import { z } from "zod";
-import { useAppDispatch } from "@/app/store";
-import { loginUser } from "@/entities/auth/actions/auth";
-import { fetchAuthUser } from "@/entities/auth/model/auth-slice";
-import { Button, ButtonGroup } from "@/shared/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/shared/ui/card";
-import { Form, FormField } from "@/shared/ui/form";
-import { RouteLink } from "@/shared/ui/link";
-import { TextInput } from "@/shared/ui/text-input";
-import { createValidator } from "@/shared/lib/validation";
+import { useAppDispatch } from "@client-app/app/store";
+import { loginUser } from "@client-app/entities/auth/actions/auth";
+import { fetchAuthUser } from "@client-app/entities/auth/model/auth-slice";
+import { Button, ButtonGroup } from "@client-app/shared/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@client-app/shared/ui/card";
+import { Form, FormField } from "@client-app/shared/ui/form";
+import { RouteLink } from "@client-app/shared/ui/link";
+import { TextInput } from "@client-app/shared/ui/text-input";
+import { createValidator } from "@client-app/shared/lib/validation";
 
 const validate = createValidator(
     z.object({

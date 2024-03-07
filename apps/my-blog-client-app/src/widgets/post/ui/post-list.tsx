@@ -1,6 +1,6 @@
 import { FC, Fragment, useEffect, useState } from "react";
-import { PostPreview } from "@/widgets/post/ui/post-preview";
-import { Post } from "@/entities/post/model/post";
+import { PostPreview } from "@client-app/widgets/post/ui/post-preview";
+import { Post } from "@client-app/entities/post/model/post";
 import { useSearchParams } from "next/navigation";
 import { fetchPosts } from "../actions/post";
 import { PostNotFound } from "./post-not-found";

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { pt } from "@/shared/lib/sizes";
+import { pt } from "@client-app/shared/lib/sizes";
 
 const AppLogoRoot = styled.a`
     color: inherit;

@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import ResetPasswordForm from "@/widgets/auth/ui/reset-password-form";
+import ResetPasswordForm from "@client-app/widgets/auth/ui/reset-password-form";
 
 const ResetPasswordPage: FC = () => {
     return <ResetPasswordForm />;

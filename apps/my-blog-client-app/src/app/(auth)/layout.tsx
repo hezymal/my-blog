@@ -2,8 +2,8 @@
 
 import { FC, ReactNode } from "react";
 import styled from "styled-components";
-import { AppLogo } from "@/features/app/ui/app-logo";
-import { pt } from "@/shared/lib/sizes";
+import { AppLogo } from "@client-app/features/app/ui/app-logo";
+import { pt } from "@client-app/shared/lib/sizes";
 
 interface AuthLayoutProps {
     children: ReactNode;

@@ -1,11 +1,11 @@
 import { FC, FormEventHandler, Fragment, useState } from "react";
-import { NewPost } from "@/entities/post/model/post";
-import { CreatePostButton } from "@/features/post/ui/create-post-button";
-import { Button, ButtonGroup } from "@/shared/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/shared/ui/card";
-import { Form, FormField } from "@/shared/ui/form";
-import { Modal } from "@/shared/ui/modal";
-import { TextInput } from "@/shared/ui/text-input";
+import { NewPost } from "@client-app/entities/post/model/post";
+import { CreatePostButton } from "@client-app/features/post/ui/create-post-button";
+import { Button, ButtonGroup } from "@client-app/shared/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@client-app/shared/ui/card";
+import { Form, FormField } from "@client-app/shared/ui/form";
+import { Modal } from "@client-app/shared/ui/modal";
+import { TextInput } from "@client-app/shared/ui/text-input";
 
 interface PostCreationModalProps {}
 

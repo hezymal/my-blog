@@ -2,8 +2,8 @@
 
 import { redirect } from "next/navigation";
 import { FC } from "react";
-import { useAppDispatch } from "@/app/store";
-import { removeUser } from "@/entities/auth/model/auth-slice";
+import { useAppDispatch } from "@client-app/app/store";
+import { removeUser } from "@client-app/entities/auth/model/auth-slice";
 
 const Page: FC = () => {
     const dispatch = useAppDispatch();

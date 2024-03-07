@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Button } from "@/shared/ui/button";
+import { Button } from "@client-app/shared/ui/button";
 
 interface CreatePostButtonProps {
     onClick: () => void;

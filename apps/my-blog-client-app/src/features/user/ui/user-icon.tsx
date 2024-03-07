@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { colors } from "@/shared/lib/colors";
-import { pt } from "@/shared/lib/sizes";
+import { colors } from "@client-app/shared/lib/colors";
+import { pt } from "@client-app/shared/lib/sizes";
 
 interface UserIconProps {
     userName: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import { FC } from "react";
-import { UserGeneralInfo } from "@/widgets/user/ui/user-general-info";
+import { UserGeneralInfo } from "@client-app/widgets/user/ui/user-general-info";
 
 const ProfilePage: FC = () => {
     return <UserGeneralInfo />;

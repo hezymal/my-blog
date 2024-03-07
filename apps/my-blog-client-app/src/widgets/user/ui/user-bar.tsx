@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { useAppSelector } from "@/app/store";
-import { UserIcon } from "@/features/user/ui/user-icon";
-import { UserMenu } from "@/features/user/ui/user-menu";
-import { Dropdown } from "@/shared/ui/dropdown";
+import { useAppSelector } from "@client-app/app/store";
+import { UserIcon } from "@client-app/features/user/ui/user-icon";
+import { UserMenu } from "@client-app/features/user/ui/user-menu";
+import { Dropdown } from "@client-app/shared/ui/dropdown";
 
 interface UserBarProps {}
 

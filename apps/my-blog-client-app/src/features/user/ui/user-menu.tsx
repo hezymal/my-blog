@@ -1,8 +1,8 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { Card, CardContent, CardFooter, CardHeader } from "@/shared/ui/card";
-import { Menu, MenuItem } from "@/shared/ui/menu";
-import { pt } from "@/shared/lib/sizes";
+import { Card, CardContent, CardFooter, CardHeader } from "@client-app/shared/ui/card";
+import { Menu, MenuItem } from "@client-app/shared/ui/menu";
+import { pt } from "@client-app/shared/lib/sizes";
 
 interface UserMenuProps {
     userName: string;
