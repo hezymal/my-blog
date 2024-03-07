@@ -1,25 +1,41 @@
-import { FC, Fragment, useEffect, useState } from "react";
-import { PostPreview } from "@client-app/widgets/post/ui/post-preview";
-import { Post } from "@client-app/entities/post/model/post";
 import { useSearchParams } from "next/navigation";
-import { fetchPosts } from "../actions/post";
+import { FC, Fragment, useEffect, useState } from "react";
+import { searchPosts } from "@client-app/entities/post/actions/post";
+import { Post } from "@client-app/entities/post/model/post";
+import { PostPreview } from "@client-app/widgets/post/ui/post-preview";
 import { PostNotFound } from "./post-not-found";
 
-interface PostListProps {}
-
-export const PostList: FC<PostListProps> = () => {
+export const PostList: FC = () => {
     const searchParams = useSearchParams();
     const [posts, setPosts] = useState<Post[]>([]);
 
     const category = searchParams.get("category");
 
     useEffect(() => {
-        const fetch = async () => {
-            const posts = await fetchPosts({ category });
-            setPosts(posts);
+        const search = async () => {
+            const searchResult = await searchPosts({ category });
+            if (searchResult.ok) {
+                setPosts(
+                    searchResult.payload.map((p) => ({
+                        id: p.id,
+                        title: p.title,
+                        coverUrl: p.coverUrl,
+                        createDate: new Date(p.createDate),
+                        modifiedDate: p.modifiedDate
+                            ? new Date(p.modifiedDate)
+                            : null,
+                        description: p.description,
+                        isLiked: p.isLiked,
+                        numberOfLikes: p.numberOfLikes,
+                        numberOfComments: p.numberOfComments,
+                        numberOfViews: p.numberOfViews,
+                        categoryName: p.categoryName,
+                    }))
+                );
+            }
         };
 
-        fetch();
+        search();
     }, [category]);
 
     return (

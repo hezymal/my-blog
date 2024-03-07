@@ -26,7 +26,13 @@ const buildHeaders = (request: NextRequest) => {
     return headers;
 };
 
+const logRequest = (request: NextRequest) => {
+    console.log("[ request ]", request.method, request.url);
+};
+
 export async function GET(request: NextRequest) {
+    logRequest(request);
+
     const url = buildApiUrl(request.nextUrl.pathname);
     const headers = buildHeaders(request);
     const response = await fetch(url, {
@@ -37,9 +43,11 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+    logRequest(request);
+
     const url = buildApiUrl(request.nextUrl.pathname);
     const headers = buildHeaders(request);
-    const body = await request.text() || null;
+    const body = (await request.text()) || null;
     const response = await fetch(url, {
         method: http.HTTP_METHOD_POST,
         headers,
@@ -49,9 +57,11 @@ export async function POST(request: NextRequest) {
 }
 
 export async function PUT(request: NextRequest) {
+    logRequest(request);
+
     const url = buildApiUrl(request.nextUrl.pathname);
     const headers = buildHeaders(request);
-    const body = await request.text() || null;
+    const body = (await request.text()) || null;
     const response = await fetch(url, {
         method: http.HTTP_METHOD_PUT,
         headers,
@@ -61,9 +71,11 @@ export async function PUT(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
+    logRequest(request);
+
     const url = buildApiUrl(request.nextUrl.pathname);
     const headers = buildHeaders(request);
-    const body = await request.text() || null;
+    const body = (await request.text()) || null;
     const response = await fetch(url, {
         method: http.HTTP_METHOD_DELETE,
         headers,

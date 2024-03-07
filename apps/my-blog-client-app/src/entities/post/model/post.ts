@@ -3,7 +3,7 @@ export interface Post {
     title: string;
     coverUrl: string;
     createDate: Date;
-    modifiedDate: Date;
+    modifiedDate: Date | null;
     description: string;
     isLiked: boolean;
     numberOfLikes: number;

@@ -19,14 +19,16 @@ export const shortenNumber = (num: number): string => {
         strNum = num.toString();
     }
 
-    const lastChar = strNum.at(strNum.length - 1);
-    const penulChar = strNum.at(strNum.length - 2);
-
-    if (lastChar === ZERO_CHAR) {
-        if (penulChar === ZERO_CHAR) {
-            strNum = strNum.slice(0, strNum.length - 3);
-        } else {
-            strNum = strNum.slice(0, strNum.length - 1);
+    if (strNum.length > 1) {
+        const lastChar = strNum.at(strNum.length - 1);
+        const penulChar = strNum.at(strNum.length - 2);
+    
+        if (lastChar === ZERO_CHAR) {
+            if (penulChar === ZERO_CHAR) {
+                strNum = strNum.slice(0, strNum.length - 3);
+            } else {
+                strNum = strNum.slice(0, strNum.length - 1);
+            }
         }
     }
 

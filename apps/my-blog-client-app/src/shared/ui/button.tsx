@@ -124,7 +124,7 @@ const ButtonRoot = styled.button<ButtonRootProps>`
                     background-color: ${colors.grey2};
             
                     &:hover {
-                        background-color: ${colors.grey3};
+                        background-color: ${colors.grey_4};
                     }
                 `;
         }
@@ -168,7 +168,7 @@ const IconButtonRoot = styled.button<IconButtonRootProps>`
             case "default":
                 return `
                     &:hover {
-                        background-color: ${colors.grey3};
+                        background-color: ${colors.grey_4};
                     }
                 `;
 
@@ -223,7 +223,7 @@ const ButtonGroupRoot = styled.div<ButtonGroupRootProps>`
 
 const ButtonDelimeterRoot = styled.hr`
     border: none;
-    border-left: 1px solid ${colors.grey3};
+    border-left: 1px solid ${colors.grey_4};
     margin: 0;
     width: 1px;
 `;

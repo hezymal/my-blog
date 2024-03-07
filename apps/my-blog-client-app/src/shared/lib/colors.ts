@@ -7,7 +7,7 @@ export const colors = {
     grey02: "rgba(16, 16, 16, 0.8)",
     grey1: "#202020",
     grey2: "#303030",
-    grey3: "#404040",
+    grey_4: "#404040",
     grey7: "#707070",
     grey9: "#909090",
     green_9: "#009000",

@@ -15,7 +15,7 @@ const getIconColorByEntryType = (
             return "light-success";
 
         case "info":
-            return "light-default";
+            return "default";
 
         case "error":
             return "light-danger";

@@ -34,7 +34,7 @@ const AlertRoot = styled.div<AlertRootProps>`
 
             case "info":
                 return `
-                    background-color: ${colors.grey2};
+                    background-color: ${colors.grey1};
                 `;
 
             case "error":

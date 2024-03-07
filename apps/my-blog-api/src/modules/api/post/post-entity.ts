@@ -2,9 +2,8 @@ export interface PostEntity {
     title: string;
     coverUrl: string;
     createDate: string;
-    modifiedDate: string;
+    modifiedDate: string | null;
     description: string;
-    isLiked: boolean;
     numberOfLikes: number;
     numberOfComments: number;
     numberOfViews: number;

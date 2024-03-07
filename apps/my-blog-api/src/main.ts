@@ -1,5 +1,7 @@
 import express from "express";
 import session from "express-session";
+import { authMiddleware } from "./lib/auth-middleware";
+import { logMiddleware } from "./lib/log-middleware";
 import { authRouter } from "./modules/api/auth/auth-router";
 import { postRouter } from "./modules/api/post/post-router";
 
@@ -9,6 +11,7 @@ const SESSION_SECRET = process.env.SESSION_SECRET;
 
 const app = express();
 
+app.use(logMiddleware);
 app.use(express.json());
 app.use(
     session({
@@ -19,6 +22,8 @@ app.use(
 );
 
 app.use("/api/auth", authRouter);
+
+app.use(authMiddleware);
 app.use("/api/posts", postRouter);
 
 app.listen(MY_BLOG_API_PORT, MY_BLOG_API_HOST, () => {

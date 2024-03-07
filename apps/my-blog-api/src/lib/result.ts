@@ -3,19 +3,13 @@ export enum ErrorCode {
     NotFound = "NotFound",
 }
 
-type OkResult<TPayload = null> = {
-    ok: true;
-    payload: TPayload;
-};
+export type OkResult<TPayload> = { ok: true; payload: TPayload; };
 
-type ErrorResult = {
-    ok: false;
-    errorCode: ErrorCode;
-};
+export type ErrorResult = { ok: false; errorCode: ErrorCode; };
 
-export type Result<TPayload = null> = OkResult<TPayload> | ErrorResult;
+export type Result<TPayload> = OkResult<TPayload> | ErrorResult;
 
-const ok = <TPayload = null>(payload: TPayload = null): OkResult<TPayload> => ({
+const ok = <TPayload>(payload: TPayload): OkResult<TPayload> => ({
     ok: true,
     payload,
 });

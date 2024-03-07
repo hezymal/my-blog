@@ -25,7 +25,7 @@ const RouteLinkRoot = styled(NextLink)`
     text-decoration: none;
 
     &:hover {
-        background-color: ${colors.grey3};
+        background-color: ${colors.grey_4};
     }
 `;
 
